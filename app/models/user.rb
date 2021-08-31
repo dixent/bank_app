@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :bank_accounts, dependent: :destroy
 
-  after_commit :create_bank_account
+  after_create :create_bank_account
 
   def create_bank_account
     bank_accounts.create!

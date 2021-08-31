@@ -1,0 +1,7 @@
+h3
+  = t('.actions')
+.btn-group role='group'
+  button.btn.btn-dark type='button' data-bs-toggle='modal' data-bs-target='#check-form'
+    = t('.check')
+
+= render 'bank_accounts/partials/check_form', transaction: transaction

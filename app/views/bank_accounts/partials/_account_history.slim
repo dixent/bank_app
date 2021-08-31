@@ -1,0 +1,29 @@
+h3
+  = Transaction.human_attribute_name(:transactions)
+table.table
+  thead.table-dark
+    tr
+      th scope='col'
+        = t('.date')
+      th scope='col'
+        = Transaction.human_attribute_name(:amount)
+      th scope='col'
+        = Transaction.human_attribute_name(:sender)
+      th scope='col'
+        = BankAccount.human_attribute_name(:recipient)
+  tbody
+    - transactions.each do
+      tr
+        td
+          = _1.created_at
+        td
+          = _1.amount
+        td
+          = set_bank_account(_1.sender, bank_account)
+        td
+          = set_bank_account(_1.recipient, bank_account)
+
+= link_to_prev_page transactions, t('prev_page'), class: 'btn btn-dark'
+= link_to_next_page transactions, t('next_page'), class: 'btn btn-dark'
+
+

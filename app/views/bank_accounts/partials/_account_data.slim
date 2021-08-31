@@ -1,0 +1,15 @@
+h3
+  = BankAccount.model_name.human
+table.table
+  thead
+    tr
+      th scope='col'
+        = BankAccount.human_attribute_name(:balance_cents)
+      th scope='col'
+        = BankAccount.human_attribute_name(:currency)
+  tbody
+    tr
+      td
+        = bank_account.balance
+      td
+        = bank_account.balance_currency

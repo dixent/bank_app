@@ -30,4 +30,34 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  bank: From bank
+  next_page: Next
+  prev_page: Previous
+  errors:
+    sender_equal_recipient: The sender's bank account shouldn't equal recipient!
+  activerecord:
+    models:
+      bank_account: Account Data
+    attributes:
+      bank_account:
+        currency: Currency
+        balance_cents: Balance
+        transactions: Account History
+      transaction:
+        recipient_id: Recipient Id
+  bank_accounts:
+    partials:
+      account_history:
+        data: Date
+        myself: Yourself
+      check_form:
+        title: Check data
+        submit: Send
+        close: Close
+      payment_actions:
+        actions: Payment actions
+        check: Create check
+  checks:
+    alerts:
+      success_check: Check created successfully!
+      recipient_not_found: A recipient doesn't found.

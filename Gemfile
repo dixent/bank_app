@@ -23,6 +23,12 @@ gem 'devise', '~> 4.8'
 gem 'bootsnap', '>= 1.4.4', require: false
 # This library provides integration of RubyMoney - Money gem with Rails
 gem 'money-rails', '~> 1.12'
+# Slim templates generator for Rails
+gem 'slim-rails', '~> 3.3'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari', '~> 1.2.1'
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form', '~> 5.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
